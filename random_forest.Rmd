@@ -1,0 +1,125 @@
+---
+title: "random_forest"
+author: "Wyclife Agumba Oluoch"
+date: '2022-05-13'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Here I demonstrate how to use randomforest in R.
+
+```{r}
+library(randomForest)
+library(datasets)
+library(caret)
+```
+
+We will use the inbuilt iris data for this demonstration.
+
+```{r}
+data <- iris
+str(data)
+```
+
+
+Converting Species column to factor 
+
+```{r}
+data$Species <- as.factor(data$Species)
+table(data$Species)
+```
+
+
+Partitioning the data into train and test sets.
+
+```{r}
+set.seed(222)
+ind <- sample(2, nrow(data), replace = TRUE, prob = c(0.7, 0.3))
+train <- data[ind == 1,]
+test <- data[ind == 2,]
+```
+
+Building the random forest
+
+```{r}
+rf <- randomForest(Species ~., data = train, proximity = TRUE)
+print(rf)
+```
+
+Predicting on train data
+
+```{r}
+predict_train <- predict(rf, train)
+confusionMatrix(predict_train, train$Species)
+```
+
+Predicting on test data
+
+```{r}
+predict_test <- predict(rf, test)
+confusionMatrix(predict_test, test$Species)
+```
+
+ Error rate of the model
+ 
+```{r}
+plot(rf)
+```
+
+
+Tuning the model, although it already performed well
+
+```{r}
+t <- tuneRF(train[, -5], train[, 5],
+            stepFactor = 0.5,
+            plot = TRUE,
+            ntreeTry = 150,
+            trace = TRUE,
+            improve = 0.05)
+```
+
+
+```{r}
+hist(treesize(rf),
+     main = 'No. of nodes for the trees',
+     col = 'green')
+
+varImpPlot(rf, 
+           sort = TRUE,
+           n.var = 10,
+           main = 'Top 10 variable importance')
+
+importance(rf)
+```
+
+
+Partial dependence plot
+```{r}
+partialPlot(rf, train, Petal.Width, 'setosa')
+```
+
+Multi-dimensional plot
+
+```{r}
+MDSplot(rf, train$Species, pch = 10)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
