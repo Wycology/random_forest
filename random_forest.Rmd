@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This work was developed following this [blog](https://www.r-bloggers.com/2021/04/random-forest-in-r/#:~:text=Random%20Forest%20in%20R%2C%20Random,to%20identify%20the%20important%20attributes.)
 
-Here I demonstrate how to use randomforest in R.
+Here I demonstrate how to use `randomForest` in R.
 
 ```{r}
 library(randomForest)
