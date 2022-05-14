@@ -29,7 +29,7 @@ str(data) # Checking for the structure of the data
 ```
 
 
-Converting Species column to factor 
+Converting Species variable to factor since initially it was seen as character.
 
 ```{r}
 data$Species <- as.factor(data$Species)
