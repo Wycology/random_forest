@@ -1,6 +1,6 @@
 ---
-title: "Using `randomForest` in R"
-author: "Wyclife Agumba Oluoch"
+title: "<center>Using `randomForest` in R</center>"
+author: "<center>Wyclife Agumba Oluoch</center>"
 date: '2022-05-13'
 output: html_document
 ---
