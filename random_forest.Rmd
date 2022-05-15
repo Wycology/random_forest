@@ -43,14 +43,6 @@ data <- iris
 str(data) # Checking for the structure of the data
 ```
 
-Converting Species variable to factor since initially it was seen as character.
-
-```{r}
-data$Species <- as.factor(data$Species)
-table(data$Species)
-```
-
-
 Partitioning the data into train and test sets.
 
 ```{r}
@@ -124,18 +116,3 @@ Multi-dimensional plot
 ```{r}
 MDSplot(rf, train$Species, pch = 10)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
