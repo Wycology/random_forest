@@ -65,7 +65,6 @@ rf <- randomForest(Species ~., data = train, proximity = TRUE)
 print(rf)
 ```
 
-
 ## Making prediction
 
 Predicting on train data
@@ -89,6 +88,9 @@ Error rate of the model
 ```{r}
 plot(rf, main = "Plot of the randomForest model")
 ```
+
+## Variable importance
+
 
 
 Tuning the model, although it already performed well
