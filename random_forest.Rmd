@@ -30,7 +30,7 @@ knitr::write_bib(c(
 ), 'bib/packages.bib')
 ```
 
-# Introduction
+# Working with `randomForest` in R
 
 This work was developed following this [blog](https://www.r-bloggers.com/2021/04/random-forest-in-r/#:~:text=Random%20Forest%20in%20R%2C%20Random,to%20identify%20the%20important%20attributes).
 
@@ -38,19 +38,25 @@ Here I demonstrate how to use `randomForest` in R to train a model and make pred
 
 We will use the inbuilt iris data for this demonstration. In that case, we use the four continuous variables (**`r names(iris[-5])`**) to predict **`r names(iris[5])`** of iris flower.
 
+## Loading the data
+
 ```{r}
 data <- iris
 str(data) # Checking for the structure of the data
 ```
 
-Partitioning the data into train and test sets.
+## Partitioning the data
+
+Here we break down the data into two sets with one being used for training the model and the other being used for testing the model performance. Normally training set should be having more data than the test set. But can vary depending on your use case.
 
 ```{r}
-set.seed(222)
-ind <- sample(2, nrow(data), replace = TRUE, prob = c(0.7, 0.3))
+set.seed(1985)
+ind <- sample(2, nrow(data), replace = T, prob = c(0.7, 0.3))
 train <- data[ind == 1,]
 test <- data[ind == 2,]
 ```
+
+## Building the model
 
 Building the random forest model using the target and all the continuous variables in the dataset.
 
@@ -58,6 +64,9 @@ Building the random forest model using the target and all the continuous variabl
 rf <- randomForest(Species ~., data = train, proximity = TRUE)
 print(rf)
 ```
+
+
+## Making prediction
 
 Predicting on train data
 
@@ -73,7 +82,9 @@ predict_test <- predict(rf, test)
 confusionMatrix(predict_test, test$Species)
 ```
 
- Error rate of the model
+## Model performance
+
+Error rate of the model
  
 ```{r}
 plot(rf, main = "Plot of the randomForest model")
@@ -104,7 +115,6 @@ varImpPlot(rf,
 
 importance(rf)
 ```
-
 
 Partial dependence plot
 ```{r}
