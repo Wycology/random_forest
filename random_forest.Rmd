@@ -2,7 +2,16 @@
 title: "<center>Using `randomForest` in R</center>"
 author: "<center>Wyclife Agumba Oluoch</center>"
 date: "<center>`r Sys.time()`</center>"
-output: html_document
+bibliography:
+  - bib/packages.bib
+nocite: '@*'
+output: 
+    html_document:
+      toc: true
+      toc_depth: 2
+      toc_float: true
+      theme: darkly
+      #highlight: pygments
 ---
 
 ```{r setup, include=FALSE}
@@ -91,7 +100,21 @@ plot(rf, main = "Plot of the randomForest model")
 
 ## Variable importance
 
+Kind of showing which were the most important variables in predicting species types.
 
+```{r}
+varImp(rf)
+```
+
+So according to this, it seems Petal.Length and Petal.Width are the most important variables in predicting Species of iris. Let us plot these individually.
+
+```{r}
+plot(iris$Petal.Length, iris$Petal.Width, col = iris$Species)
+plot(iris$Petal.Length, col = iris$Species)
+plot(iris$Petal.Width, col = iris$Species)
+```
+
+Seems we can see the species grouping themselves distinctively using the two variables.
 
 Tuning the model, although it already performed well
 
