@@ -56,7 +56,7 @@ train <- data[ind == 1,]
 test <- data[ind == 2,]
 ```
 
-## Building the model
+## Building model
 
 Building the random forest model using the target and all the continuous variables in the dataset.
 
