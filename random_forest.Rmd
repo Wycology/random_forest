@@ -42,7 +42,7 @@ We will use the inbuilt iris data for this demonstration. In that case, we use t
 
 ```{r}
 data <- iris
-str(data) # Checking for the structure of the data
+str(data)
 ```
 
 ## Partitioning the data
