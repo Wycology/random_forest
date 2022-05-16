@@ -49,7 +49,7 @@ We will use the in-built iris data for this demonstration. In that case, we use 
 
 ## Loading the data
 
-```{r}
+```{r data_loading}
 data <- iris
 str(data)
 ```
