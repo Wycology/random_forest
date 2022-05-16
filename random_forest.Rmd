@@ -41,7 +41,7 @@ knitr::write_bib(c(
 
 # Model building using `randomForest()` in R
 
-This work was developed following this [blog](https://www.r-bloggers.com/2021/04/random-forest-in-r/#:~:text=Random%20Forest%20in%20R%2C%20Random,to%20identify%20the%20important%20attributes).
+This work was developed following this [blog post](https://www.r-bloggers.com/2021/04/random-forest-in-r/#:~:text=Random%20Forest%20in%20R%2C%20Random,to%20identify%20the%20important%20attributes).
 
 Here I demonstrate how to use `randomForest` in R to train a model and make prediction over new data. New data here actually has all features that were used in training dataset. Generally, the two sets should be overlapping in values, though not exactly the same.
 
