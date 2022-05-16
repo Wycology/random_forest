@@ -45,7 +45,7 @@ This work was developed following this [blog post](https://www.r-bloggers.com/20
 
 Here I demonstrate how to use `randomForest()` in R to train a model and make prediction over new data. New data here actually has all features that were used in the training dataset. Generally, the two sets should be overlapping in values, though not exactly the same. By this I mean, it does not make sense to train a model then use it to make prediction on dataset with ranges beyond that of the training set.
 
-We will use the inbuilt iris data for this demonstration. In that case, we use the four continuous variables (**`r names(iris[-5])`**) to predict **`r names(iris[5])`** of iris flower.
+We will use the in-built iris data for this demonstration. In that case, we use the four continuous variables (**`r names(iris[-5])`**) to predict **`r names(iris[5])`** of iris flower.
 
 ## Loading the data
 
