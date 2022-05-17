@@ -142,6 +142,7 @@ importance(rf)
 ```
 
 Partial dependence plot
+
 ```{r}
 partialPlot(rf, train, Petal.Width, 'setosa')
 ```
