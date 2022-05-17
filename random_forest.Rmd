@@ -83,7 +83,7 @@ predict_train <- predict(rf, train)
 confusionMatrix(predict_train, train$Species)
 ```
 
-Predicting on test data
+Predicting on test data-set
 
 ```{r}
 predict_test <- predict(rf, test)
