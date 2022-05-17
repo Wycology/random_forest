@@ -116,7 +116,7 @@ plot(iris$Petal.Width, col = iris$Species)
 
 Seems we can see the species grouping themselves distinctively using the two variables.
 
-Tuning the model, although it already performed well
+Tuning the model, although it already performed well.
 
 ```{r}
 t <- tuneRF(train[, -5], train[, 5],
