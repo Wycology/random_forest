@@ -67,7 +67,7 @@ test <- data[ind == 2,]
 
 ## Building the `randomForest()` model
 
-Building the random forest model using the target and all the continuous variables in the dataset.
+Building the random forest model using the target variable and all the continuous variables in the dataset.
 
 ```{r building_model}
 rf <- randomForest(Species ~., data = train, proximity = TRUE)
