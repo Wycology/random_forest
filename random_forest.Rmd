@@ -39,7 +39,7 @@ knitr::write_bib(c(
 ), 'bib/packages.bib')
 ```
 
-# Building using `randomForest()` in R
+# Building model using `randomForest()` in R
 
 This work was developed following this [blog post](https://www.r-bloggers.com/2021/04/random-forest-in-r/#:~:text=Random%20Forest%20in%20R%2C%20Random,to%20identify%20the%20important%20attributes).
 
