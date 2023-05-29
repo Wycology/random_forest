@@ -1,6 +1,6 @@
 ---
 title: "Using `randomForest()` in R"
-author: "Wyclife Agumba Oluoch</center>"
+author: "Wyclife Agumba Oluoch"
 date: "<center>`r Sys.time()`</center>"
 bibliography:
   - bib/packages.bib
