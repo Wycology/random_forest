@@ -1,5 +1,5 @@
 ---
-title: "<center>Using `randomForest()` in R</center>"
+title: "Using `randomForest()` in R"
 author: "<center>Wyclife Agumba Oluoch</center>"
 date: "<center>`r Sys.time()`</center>"
 bibliography:
