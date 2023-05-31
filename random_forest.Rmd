@@ -59,9 +59,9 @@ str(data) # To check the existing variables and their types.
 Here, we break down the data into two sets with one part to be used for training/calibrating/building the model and the other part being left for testing the model performance once it is built successfully. Normally, training set should be having more data than the test set, especially when there is limited records of data. But can vary depending on specific use case.
 
 ```{r}
-set.seed(1985)
-ind <- sample(2, nrow(data), replace = T, prob = c(0.7, 0.3))
-train <- data[ind == 1,]
+set.seed(1985) # To enable reproducibility
+ind <- sample(x = 2, size = nrow(data), replace = T, prob = c(0.7, 0.3))
+train <- data[ind == 1,] # Retains the rows of data where index == 1 is true
 test <- data[ind == 2,]
 ```
 
