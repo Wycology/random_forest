@@ -61,8 +61,8 @@ Here, we break down the data into two sets with one part to be used for training
 ```{r}
 set.seed(1985) # To enable reproducibility
 ind <- sample(x = 2, size = nrow(data), replace = T, prob = c(0.7, 0.3))
-train <- data[ind == 1,] # Retains the rows of data where index == 1 is true
-test <- data[ind == 2,]
+train <- data[ind == 1,] # Retains the rows of data where index == 1 is TRUE
+test <- data[ind == 2,] # Retains the rows of data where index == 2 is TRUE
 ```
 
 ## Building the `randomForest()` model
@@ -73,10 +73,9 @@ Building the random forest model using the target variable and all the continuou
 rf <- randomForest(Species ~., data = train, proximity = TRUE)
 print(rf)
 ```
-
 ## Making prediction
 
-Predicting on train data-set.
+Predicting on train tdata-set.
 
 ```{r}
 predict_train <- predict(rf, train)
