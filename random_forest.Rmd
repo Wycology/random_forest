@@ -75,7 +75,7 @@ print(rf)
 ```
 ## Making prediction
 
-Predicting on the data-set use.
+Predicting on the data-set used.
 
 ```{r}
 predict_train <- predict(rf, train)
