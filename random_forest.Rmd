@@ -105,7 +105,7 @@ Kind of showing which were the most important variables in predicting species ty
 varImp(rf)
 ```
 
-So according to this, it seems Petal.Length and Petal.Width are the top two important variables in predicting Species of iris. Let us plot these individually.
+So according to this, it seems `Petal.Length and Petal.Width are the top two important variables in predicting Species of iris. Let us plot these individually.
 
 ```{r}
 plot(iris$Petal.Length, iris$Petal.Width, col = iris$Species)
