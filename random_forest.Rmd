@@ -78,7 +78,7 @@ print(rf)
 Predicting on the data-set used in training the model.
 
 ```{r}
-predict_train <- predict(rf, train) # Predict on 
+predict_train <- predict(rf, train) # Predict on train
 confusionMatrix(predict_train, train$Species)
 ```
 
