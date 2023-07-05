@@ -56,7 +56,7 @@ str(data) # Check the existing variables and their corresponding types.
 
 ## Partitioning the data
 
-Here, we break down the data into two separa sets with one part to be used for training/calibrating/building the model and the other part being left for testing the model performance once it is built successfully. Normally, training set should be having more data than the test set, especially when there is limited records of data. But can vary depending on specific use case.
+Here, we break down the data into two separate sets with one part to be used for training/calibrating/building the model and the other part being left for testing the model performance once it is built successfully. Normally, training set should be having more data than the test set, especially when there is limited records of data. But can vary depending on specific use case.
 
 ```{r}
 set.seed(1985) # To enable reproducibility
