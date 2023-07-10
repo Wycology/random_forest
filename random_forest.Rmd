@@ -82,7 +82,7 @@ predict_train <- predict(rf, train) # Predict on train data-set
 confusionMatrix(predict_train, train$Species)
 ```
 
-Makiredicting on test data-set
+Makinredicting on test data-set
 
 ```{r}
 predict_test <- predict(rf, test)
