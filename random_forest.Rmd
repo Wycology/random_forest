@@ -38,7 +38,7 @@ knitr::write_bib(c(
 
 This work was developed following this [blog post](https://www.r-bloggers.com/2021/04/random-forest-in-r/#:~:text=Random%20Forest%20in%20R%2C%20Random,to%20identify%20the%20important%20attributes).
 
-I show how to use `randomForest()` in `R` to train a model and make prediction on a new dataset. **New data** here actually has all features that were used in the training data. Generally, the two sets should be overlapping in values, though not exactly the same. By this I mean, it does not make sense to train a model then use it to make prediction on data with ranges beyond that of the training set.
+I show how to use `randomForest()` in `R` to train a model and make predictions on a new dataset. **New data** here actually has all features that were used in the training data. Generally, the two sets should be overlapping in values, though not exactly the same. By this I mean, it does not make sense to train a model then use it to make prediction on data with ranges beyond that of the training set.
 
 We will use the in-built iris data for this demonstration. In that case, we use the four continuous variables (**`r names(iris[-5])`**) to predict **`r names(iris[5])`** of iris flower.
 
