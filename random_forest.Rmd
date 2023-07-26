@@ -86,7 +86,7 @@ confusionMatrix(predict_test, test$Species)
 
 ## Model performance
 
-Trror rate of the model.
+Thrror rate of the model.
  
 ```{r}
 plot(rf, main = "Plot of the randomForest model")
