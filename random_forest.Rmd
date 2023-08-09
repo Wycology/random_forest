@@ -48,7 +48,7 @@ We will use the in-built iris data for this demonstration. In that case, we use 
 ## Loading the data
 
 ```{r data_loading}
-data <- iris # Assigning the iris dataset to an object 
+data <- iris # Assigning the iris dataset to an object called 
 str(data) # Check the existing variables and their corresponding types.
 ```
 
