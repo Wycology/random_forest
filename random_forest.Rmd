@@ -71,6 +71,7 @@ Building the random forest model using the target variable and all the continuou
 rf <- randomForest(Species ~., data = train, proximity = TRUE)
 print(rf)
 ```
+
 ## Making prediction
 
 Predicting on the data-set used in training the model.
