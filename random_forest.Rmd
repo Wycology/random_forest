@@ -90,7 +90,7 @@ confusionMatrix(predict_test, test$Species)
 
 ## Model performance
 
-The error rate of the model can .
+The error rate of the model can b.
  
 ```{r}
 plot(rf, main = "Plot of the randomForest model")
