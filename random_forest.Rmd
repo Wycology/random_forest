@@ -90,7 +90,7 @@ confusionMatrix(predict_test, test$Species)
 
 ## Model performance
 
-The error rate of the model can be viewed as foll.
+The error rate of the model can be viewed as follo.
  
 ```{r}
 plot(rf, main = "Plot of the randomForest model")
