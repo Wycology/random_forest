@@ -108,7 +108,7 @@ So according to this, it seems `Petal.Length` and `Petal.Width` are the top two 
 
 ```{r}
 plot(iris$Petal.Length, iris$Petal.Width, col = iris$Species)
-plot(iris$Petal.Length, col = iris$Species) # Plotting o
+plot(iris$Petal.Length, col = iris$Species) # Plotting on
 plot(iris$Petal.Width, col = iris$Species)
 ```
 
